@@ -1,0 +1,29 @@
+/* 3 column for the index */
+.mask{
+   position: relative;
+   overflow: hidden;
+   margin: 0px auto;
+   width: 100%;
+}
+.colleft{
+   position: relative;
+   width: 100%;
+   right: 76%;
+}
+.col1{
+   position: relative;
+   overflow: hidden;
+   float: left;
+   width: 74%;
+   left: 101%;
+}
+.col2{
+   position: relative;
+   overflow: hidden;
+   float: left;
+   width: 24%;
+   left: 3%;
+}
+
+/* For soc buttons on the nav bar*/
+#soc-buttons{float:right;margin-top:1px;position:relative;}

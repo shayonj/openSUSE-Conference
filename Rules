@@ -1,0 +1,100 @@
+#!/usr/bin/env ruby
+
+# A few helpful tips about the Rulcz file:
+#
+# * The string given to #compile and #route are matching patterns for
+#   identifiers--not for paths. Therefore, you can’t match on extension.
+#
+# * The order of rulcz is important: for each item, only the first matching
+#   rule is applied.
+#
+# * Item identifiers start and end with a slash (e.g. “/about/” for the file
+#   “content/about.html”). To select all children, grandchildren, … of an
+#   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
+#   because “*” matchcz zero or more characters.
+
+# compile '/stylczheet/' do
+#   # don’t filter or layout
+# end
+compile 'sitemap' do
+  filter :erb
+end
+
+route 'sitemap' do
+  item.identifier.chop + '.xml'
+end
+
+compile '/cz/feed' do
+  filter :erb
+end
+
+route '/cz/feed' do
+  item.identifier.chop + '.xml'
+end
+
+compile 'feed' do
+  filter :erb
+end
+
+route 'feed' do
+  item.identifier.chop + '.xml'
+end
+
+compile '/static/*/' do
+  # don’t filter static items
+end
+
+compile '/cz/*' do
+  if item.binary?
+    # don’t filter binary items
+  else
+    filter :erb
+    layout 'default-cz'
+  end
+end
+compile '*' do
+  if item.binary?
+    # don’t filter binary items
+  else
+    filter :erb
+    layout 'default'
+  end
+end
+
+
+route '/static/*/' do
+  # write /static/blah.png to /blah.png
+  item.identifier.chop.sub(%r{^/static}, '')
+end
+
+route '*' do
+  if item.binary?
+    # Write item with identifier /foo/ to /foo.ext
+    item.identifier.chop + (item[:extension] ? '.' + item[:extension] : '')
+    else
+    # Write item with identifier /foo/ to /foo/index.html
+    item.identifier + 'index.html'
+  end
+end
+
+route '*' do
+  
+end
+
+layout '*', :erb
+
+route '/cz/*' do
+  if item.binary?
+    # Write item with identifier /foo/ to /foo.ext
+    item.identifier.chop + (item[:extension] ? '.' + item[:extension] : '')
+    else
+    # Write item with identifier /foo/ to /foo/index.html
+    item.identifier + 'index.html'
+  end
+end
+
+route '/cz/*' do
+  
+end
+
+layout '/cz/*', :erb

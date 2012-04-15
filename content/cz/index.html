@@ -1,0 +1,20 @@
+---
+title: Hogar
+---
+
+<!-- Start: Main Content Area -->
+<h2 class="box-header">Últimas Noticias <a href="feed.xml" target="_blank"> <img src ="/images/feed.png" width="20" height="20" /> </a></h2>
+
+
+<% spanish_articles[0..5].each do |article| %>
+
+<h1> <%= article[:title] %> </h1>
+<p align="right"> Publicado a las : <%= article[:created_at] %></p>
+<p><%= article[:excerpt]  %> ... </p>
+<p align="right"> <%= link_to("Leer más . . .", article.path) %> </p>
+<hr>
+<% end %>
+
+
+
+<!-- End: Main Content Area -->

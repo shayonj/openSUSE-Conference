@@ -1,0 +1,31 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    activesupport (3.2.2)
+      i18n (~> 0.6)
+      multi_json (~> 1.0)
+    adsf (1.0.1)
+      rack (>= 1.0.0)
+    builder (3.0.0)
+    cri (2.2.0)
+    i18n (0.6.0)
+    mime-types (1.17.2)
+    multi_json (1.1.0)
+    nanoc (3.3.1)
+      cri (~> 2.1)
+    rack (1.4.1)
+    rake (0.9.2.2)
+    systemu (2.4.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activesupport
+  adsf
+  builder
+  mime-types
+  nanoc
+  rack
+  rake
+  systemu

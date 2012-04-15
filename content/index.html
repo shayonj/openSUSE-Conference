@@ -1,0 +1,17 @@
+---
+title: Home
+---
+
+<!-- Start: Main Content Area -->
+<h2 class="box-header">Latest News <a href="feed.xml" target="_blank"> <img src ="/images/feed.png" width="20" height="20" /> </a></h2>
+<% english_articles[0..5].each do |article| %>
+
+<h1> <%= article[:title] %> </h1>
+<p align="right"> Published at : <%= article[:created_at] %></p>
+<p><%= article[:excerpt]  %> ... </p>
+<p align="right"> <%= link_to("Read more . . .", article.path) %> </p>
+<hr>
+<% end %>
+
+
+<!-- End: Main Content Area -->
