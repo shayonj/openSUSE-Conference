@@ -85,4 +85,4 @@ deploy:
     kind: rsync
     dst:  "root@shayon.me:/var/www/suse2"
     
-base_url: http://summit.opensuse.org
+base_url: http://conference.opensuse.org
