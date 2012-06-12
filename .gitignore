@@ -2,3 +2,7 @@
 
 output/*
 .DS_Store
+
+.directory
+content/cz/*.html~
+
