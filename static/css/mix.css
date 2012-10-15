@@ -27,3 +27,4 @@
 
 /* For soc buttons on the nav bar*/
 #soc-buttons{float:right;margin-top:1px;position:relative;}
+#disabled{color:#aaaaaa;}
