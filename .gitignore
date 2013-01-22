@@ -1,8 +1,6 @@
 .redcar/
-
 output/*
 .DS_Store
-
 .directory
-content/cz/*.html~
-
+tmp/*
+crash.log

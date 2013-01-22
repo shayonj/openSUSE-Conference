@@ -1,47 +1,20 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link rel="stylesheet" href="https://static.opensuse.org/themes/bento/css/style.fluid.css" type="text/css" media="screen" title="All" charset="utf-8" />
-<script src=" https://static.opensuse.org/themes/bento/js/jquery.js" type="text/javascript" charset="utf-8"></script>
-<script src=" https://static.opensuse.org/themes/bento/js/script.js" type="text/javascript" charset="utf-8"></script>
-<script src=" https://static.opensuse.org/themes/bento/js/l10n/global-navigation-data-en_US.js" type="text/javascript" charset="utf-8"></script>
-<script src=" https://static.opensuse.org/themes/bento/js/global-navigation.js" type="text/javascript" charset="utf-8"></script>
-
-<link rel="icon" type="image/png" href="http://static.opensuse.org/themes/bento/images/favicon.png" />
-
-<!-- Orbit scripts starts here -->
-<link rel="stylesheet" href="/orbit/orbit-1.2.3.css">
-<script type="text/javascript" src="/orbit/jquery-orbit-1-2-3.js"></script>	
-
-	<!--[if IE]>
-	     <style type="text/css">
-	         .timer { display: none !important; }
-	         div.caption { background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);zoom: 1; }
-	    </style>
-	<![endif]-->
-
-<!-- Run the plugin -->
+<!-- Piwik -->
 <script type="text/javascript">
-	$(window).load(function() {
-		$('#featured').orbit();
-	});
-</script>
-<!-- Orbit scripts end here -->
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://beans.opensuse.org/piwik/" : "http://beans.opensuse.org/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 18);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://beans.opensuse.org/piwik/piwik.php?idsite=18" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
 
-<!-- Twitter feed starts here-->
+<!-- Jquery -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<!-- Jquery -->
 
-<script language="javascript" src="/tweet/jquery.tweet.js" type="text/javascript"></script>
-<link href="/tweet/jquery.tweet.css" media="all" rel="stylesheet" type="text/css"/>
-
-        <script type="text/javascript">
-            jQuery(function($){
-                $(".tweet").tweet({
-                    join_text: "auto",
-                    avatar_size: 32,
-                    count: 5,
-                    loading_text: "loading tweets..."
-                });
-            });
-        </script>
-
-<!-- Twitter feed ends here-->
-<!-- Mix css - For soc buttons and 3 column layout -->
-<link rel="stylesheet" href="/css/mix.css" type="text/css" title="All" charset="utf-8" />
+<!-- Bootstrap -->
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<!-- End Bootstrap -->

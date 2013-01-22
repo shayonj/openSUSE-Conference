@@ -2,48 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <%= render 'scripts'%>
   <title>openSUSE Conference - <%= @item[:title] %></title>
   <meta name="generator" content="nanoc 3.3.0">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="http://static.opensuse.org/themes/bento/images/favicon.png" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+  <link href="/css/conference.css" rel="stylesheet" media="screen">
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 <body>
-  <%= render 'header'%>
-  <% if @item[:title] == "Home"%>
-  <div class="mask">
-    <div class="colleft">
-      <div class="col1">
-        <!-- Start: Main Content Area -->
-        <div id="content" class="container_16  content-wrapper">
-          <div class="box box-shadow grid_10">
-            <%= yield%>
-          </div>
+<%= render 'navbar'%>
 
-          <%= render 'sidebar'%>
+<%= yield%>
 
-        </div>
-        <!-- End: Main Content Area -->
-      </div>
-      <div class="col2">
-        <div id="content" class="container_16  content-wrapper">
-        <%= render "About"%>
-        </div>
-      </div>
-    </div>
-  </div>
+<%= render 'footer'%>
 
-  <%else%>
-  <!-- Start: Main Content Area -->
-  <div id="content" class="container_16  content-wrapper">
-    <div class="box box-shadow grid_10">
-      <%= yield%>
-    </div>
-
-    <%= render 'sidebar'%>
-
-  </div>
-  <!-- End: Main Content Area -->
-  <%end%>
-  <%= render 'footer-script'%>
+<%= render 'scripts'%>
 </body>
 </html>
