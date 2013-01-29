@@ -284,9 +284,19 @@
     100% { opacity: 0; }
 }
 
+    /* Press
+    -------------------------------------------------- */
+.promo-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
     /* Sponsors
     -------------------------------------------------- */
 .sponsor-image {
     margin-bottom: 30px;
     font-size: 8em;
 }
+
+
