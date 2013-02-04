@@ -42,7 +42,7 @@
 
     /* Downsize the brand/project name a bit */
     .navbar .brand {
-      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      padding: 14px 20px 10px; /* Increase vertical padding to match navbar links */
       font-size: 16px;
       font-weight: bold;
       text-shadow: 0 -1px 0 rgba(0,0,0,.5);
@@ -58,7 +58,9 @@
       margin-top: 10px;
     }
 
-
+    .navbar-social {
+      margin-right: -20px;
+    }
 
     /* CUSTOMIZE THE NAVBAR
     -------------------------------------------------- */
@@ -146,6 +148,13 @@
     }
     .featurette-image.pull-right {
       margin-left: 40px;
+    }
+
+    
+    .featurette-image-license {
+      margin-top: -30px;
+      margin-right: 30px;
+      text-align: right;
     }
 
     /* Thin out the marketing headings */
@@ -238,6 +247,10 @@
             float: none;
             max-width: 40%;
             margin: 0 auto 20px;
+        }
+        .navbar-social {
+            float: left!important;
+            padding-left: 6px;
         }
     }
 

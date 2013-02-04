@@ -5,3 +5,4 @@ output/*
 tmp/*
 crash.log
 .idea/
+config.yaml

@@ -9,12 +9,28 @@ piwikTracker.trackPageView();
 piwikTracker.enableLinkTracking();
 } catch( err ) {}
 </script><noscript><p><img src="http://beans.opensuse.org/piwik/piwik.php?idsite=18" style="border:0" alt="" /></p></noscript>
-<!-- End Piwik Tracking Code -->
 
 <!-- Jquery -->
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-<!-- Jquery -->
+<script src="/js/jquery-latest.js"></script>
 
 <!-- Bootstrap -->
 <script src="/bootstrap/js/bootstrap.min.js"></script>
-<!-- End Bootstrap -->
+
+<!-- Prettify -->
+<script src="/js/prettify.js"></script>
+
+<script>
+  !function ($) {
+    $(function(){
+      window.prettyPrint && prettyPrint()   
+    })
+  }(window.jQuery)
+</script>
+
+<!-- Tab links -->
+<script>
+$(function() {
+    var hash = window.location.hash;
+    hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+});
+</script>
