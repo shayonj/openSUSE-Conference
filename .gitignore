@@ -4,3 +4,4 @@ output/*
 .directory
 tmp/*
 crash.log
+.idea/
