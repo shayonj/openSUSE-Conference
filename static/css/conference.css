@@ -4,11 +4,16 @@
     /* Padding below the footer and lighter body text */
 
     body {
-      padding-bottom: 40px;
       color: #5a5a5a;
     }
 
+    a:hover {
+      text-decoration: none;
+    }
 
+    i {
+      padding-right: 3px;
+    }
 
     /* CUSTOMIZE THE NAVBAR
     -------------------------------------------------- */
@@ -37,7 +42,7 @@
 
     /* Downsize the brand/project name a bit */
     .navbar .brand {
-      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      padding: 14px 20px 10px; /* Increase vertical padding to match navbar links */
       font-size: 16px;
       font-weight: bold;
       text-shadow: 0 -1px 0 rgba(0,0,0,.5);
@@ -53,7 +58,9 @@
       margin-top: 10px;
     }
 
-
+    .navbar-social {
+      margin-right: -20px;
+    }
 
     /* CUSTOMIZE THE NAVBAR
     -------------------------------------------------- */
@@ -107,22 +114,19 @@
     }
 
 
-
     /* MARKETING CONTENT
     -------------------------------------------------- */
 
     /* Center align the text within the three columns below the carousel */
     .marketing .span4 {
-      text-align: center;
-    }
-    .marketing h2 {
-      font-weight: normal;
+      text-align: left;
     }
     .marketing .span4 p {
-      margin-left: 10px;
       margin-right: 10px;
     }
-
+    .marketing .details-btn {
+      margin-top: 10px;
+    }
 
     /* Featurettes
     ------------------------- */
@@ -131,7 +135,7 @@
       margin: 80px 0; /* Space out the Bootstrap <hr> more */
     }
     .featurette {
-      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+        /*padding-top: 120px;  Vertically center images part 1: add padding above and below text. */
       overflow: hidden; /* Vertically center images part 2: clear their floats. */
     }
     .featurette-image {
@@ -157,153 +161,142 @@
     .featurette-heading {
       font-size: 50px;
       font-weight: 300;
-      line-height: 1;
       letter-spacing: -1px;
+      margin-top: 0px;
+    }
+    .muted {
+      line-height: 1.4;
     }
 
+    /* Deactivate Glyphicons in order to use fontawesome */
+    [class^="icon-"], [class*=" icon-"]{
+        background:none;
+    }
 
+    /* Sponsors
+    -------------------------------------------------- */
+    .sponsor-image {
+      margin-bottom: 20px;
+      margin-top: 50px;
+    }
+
+    .sponsor-txt {
+        font-size:8em;
+        margin-top: 106px;
+        padding-bottom: 71px;
+    }
+
+    #sponsors img{
+      max-width: 80%;
+    }
+
+    /* Footer
+   -------------------------------------------------- */
+    .footer {
+        background-color: #252525;
+        border-top: 1px solid #E5E5E5;
+        margin-top: 70px;
+        padding: 30px 0;
+        text-align: center;
+        color: #FFF;
+        bottom: 100%;
+    }
+    .footer a {
+        color: #BDBDBD;
+    }
+    .footer a:hover {
+        text-decoration: underline;
+    }
+    .footer ul{
+        margin: 0px;
+    }
+    .footer-links li {
+        display: inline;
+        padding: 0 2px;
+    }
 
     /* RESPONSIVE CSS
     -------------------------------------------------- */
 
     @media (max-width: 979px) {
 
-      .container.navbar-wrapper {
-        margin-bottom: 0;
-        width: auto;
-      }
-      .navbar-inner {
-        border-radius: 0;
-        margin: -20px 0;
-      }
+        .container.navbar-wrapper {
+            margin-bottom: 0;
+            width: auto;
+        }
+        .navbar-inner {
+            border-radius: 0;
+            margin: -20px 0;
+        }
 
-      .carousel .item {
-        height: 500px;
-      }
-      .carousel img {
-        width: auto;
-        height: 500px;
-      }
+        .carousel .item {
+            height: 500px;
+        }
+        .carousel img {
+            width: auto;
+            height: 500px;
+        }
 
-      .featurette {
-        height: auto;
-        padding: 0;
-      }
-      .featurette-image.pull-left,
-      .featurette-image.pull-right {
-        display: block;
-        float: none;
-        max-width: 40%;
-        margin: 0 auto 20px;
-      }
+        .featurette {
+            height: auto;
+            padding: 0;
+        }
+        .featurette-image.pull-left,
+        .featurette-image.pull-right {
+            display: block;
+            float: none;
+            max-width: 40%;
+            margin: 0 auto 20px;
+        }
+        .navbar-social {
+            float: left!important;
+            padding-left: 6px;
+        }
     }
 
 
     @media (max-width: 767px) {
 
-      .navbar-inner {
-        margin: -20px;
-      }
+        .navbar-inner {
+            margin: -20px;
+        }
 
-      .carousel {
-        margin-left: -20px;
-        margin-right: -20px;
-      }
-      .carousel .container {
+        .carousel {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+        .carousel .container {
 
-      }
-      .carousel .item {
-        height: 300px;
-      }
-      .carousel img {
-        height: 300px;
-      }
-      .carousel-caption {
-        width: 65%;
-        padding: 0 70px;
-        margin-top: 100px;
-      }
-      .carousel-caption h1 {
-        font-size: 30px;
-      }
-      .carousel-caption .lead,
-      .carousel-caption .btn {
-        font-size: 18px;
-      }
+        }
+        .carousel .item {
+            height: 300px;
+        }
+        .carousel img {
+            height: 300px;
+        }
+        .carousel-caption {
+            width: 65%;
+            padding: 0 70px;
+            margin-top: 100px;
+        }
+        .carousel-caption h1 {
+            font-size: 30px;
+        }
+        .carousel-caption .lead,
+        .carousel-caption .btn {
+            font-size: 18px;
+        }
 
-      .marketing .span4 + .span4 {
-        margin-top: 40px;
-      }
+        .marketing .span4 + .span4 {
+            margin-top: 40px;
+        }
 
-      .featurette-heading {
-        font-size: 30px;
-      }
-      .featurette .lead {
-        font-size: 18px;
-        line-height: 1.5;
-      }
+        .featurette-heading {
+            font-size: 30px;
+        }
+        .featurette .lead {
+            font-size: 18px;
+            line-height: 1.5;
+        }
 
     }
-    
-    /* Blink
-    -------------------------------------------------- */
-.blink {
-    color: #5CE62E;
-    -webkit-animation: blink .75s linear infinite;
-    -moz-animation: blink .75s linear infinite;
-    -ms-animation: blink .75s linear infinite;
-    -o-animation: blink .75s linear infinite;
-    animation: blink .75s linear infinite;
-}
-
-@-webkit-keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 1; }
-    50.01% { opacity: 0; }
-    100% { opacity: 0; }
-}
-
-@-moz-keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 1; }
-    50.01% { opacity: 0; }
-    100% { opacity: 0; }
-}
-
-@-ms-keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 1; }
-    50.01% { opacity: 0; }
-    100% { opacity: 0; }
-}
-
-@-o-keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 1; }
-    50.01% { opacity: 0; }
-    100% { opacity: 0; }
-}
-
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 1; }
-    50.01% { opacity: 0; }
-    100% { opacity: 0; }
-}
-
-    /* Press
-    -------------------------------------------------- */
-.promo-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-    /* Sponsors
-    -------------------------------------------------- */
-.sponsor-image {
-    margin-bottom: 30px;
-    font-size: 8em;
-}
-
-
