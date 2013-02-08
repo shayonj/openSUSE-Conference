@@ -90,17 +90,26 @@
     .carousel img {
       position: absolute;
       top: 0;
-      left: 0;
-      min-width: 100%;
-      height: 500px;
+      /*left: 0;*/
+      max-width: none;
+      height: 550px;
+      margin: 0 auto;
+    }
+
+    #logo_osc13 {
+        height: 550px;
+        width: 630px;
+        background-image: url('../images/osc13_logo_slide.png');
+        background-repeat: no-repeat;
+        background-position: left -5;
     }
 
     .carousel-caption {
       background-color: transparent;
       position: static;
-      max-width: 550px;
+      max-width: 650px;
       padding: 0 20px;
-      margin-top: 200px;
+      margin-top: 160px;
     }
     .carousel-caption h1,
     .carousel-caption .lead {
@@ -252,6 +261,14 @@
             float: left!important;
             padding-left: 6px;
         }
+
+        #logo_osc13 {
+            background-image: url('../images/osc13_logo_slide.png');
+            background-repeat: no-repeat;
+            background-position: left -5;
+            background-size: 70% auto;
+        }
+
     }
 
 
@@ -297,6 +314,12 @@
         .featurette .lead {
             font-size: 18px;
             line-height: 1.5;
+        }
+        #logo_osc13 {
+            background-image: url('../images/osc13_logo_slide.png');
+            background-repeat: no-repeat;
+            background-position: left -5;
+            background-size: 50% auto;
         }
 
     }
