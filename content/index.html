@@ -1,17 +1,49 @@
----
-title: Home
----
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>openSUSE Conference. 18-22 July, 2013. Thessaloniki, Greece</title>
+  <meta name="generator" content="nanoc 3.3.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="http://static.opensuse.org/themes/bento/images/favicon.png" />
+  <link rel="alternate" type="application/rss+xml" title="oSC13 News" href="https://news.opensuse.org/category/project/events/osc/feed/" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+  <link href="/css/conference.css" rel="stylesheet" media="screen">
+  <link href="/css/font-awesome.min.css" rel="stylesheet" media="screen">
+  <link href="/css/prettify.css" type="text/css" rel="stylesheet" />
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+<%= render 'navbar'%>
 
-<!-- Start: Main Content Area -->
-<h2 class="box-header">Latest News <a href="feed.xml" target="_blank"> <img src ="/images/feed.png" width="20" height="20" /> </a></h2>
-<% english_articles[0..5].each do |article| %>
+<%= render 'carousel'%>
 
-<h1> <%= article[:title] %> </h1>
-<p align="right"> Published at : <%= article[:created_at] %></p>
-<p><%= article[:excerpt]  %> ... </p>
-<p align="right"> <%= link_to("Read more . . .", article.path) %> </p>
-<hr>
-<% end %>
+    <hr class="featurette-divider">
 
+<%= render 'about'%>
 
-<!-- End: Main Content Area -->
+    <hr class="featurette-divider">
+
+<%= render 'program'%>
+
+    <hr class="featurette-divider">
+
+<%= render 'location'%>
+
+    <hr class="featurette-divider">
+
+<%= render 'media'%>
+
+    <hr class="featurette-divider">
+
+<%= render 'sponsors'%>
+
+<%= render 'footer'%>
+
+<%= render 'scripts'%>
+</body>
+</html>
